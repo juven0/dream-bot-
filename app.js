@@ -1,13 +1,13 @@
 'use strict';
 
 require('dotenv').config();
-const messengere = require('./fonction/messenger')
-const bodyParser = require('body-parser');
-const express = require('express');
+//const messengere = require('./fonction/messenger')
+//const bodyParser = require('body-parser');
+const express = require('express')
 
 const
   request = require('request'),
-  express = require('express'),
+
   { urlencoded, json } = require('body-parser'),
   app = express();
 
