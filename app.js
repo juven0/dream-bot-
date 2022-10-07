@@ -22,6 +22,7 @@ app.use(json());
 // Respond with 'Hello World' when a GET request is made to the homepage
 app.get('/', function (_req, res) {
   res.send('bot messenger by juveno');
+  console.log('ao izi ')
 });
 
 // Adds support for GET requests to our webhook
