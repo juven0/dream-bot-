@@ -98,7 +98,7 @@ function handleMessage(senderPsid, receivedMessage) {
            'elements': [{
              'title': 'Is this the right picture?',
              'subtitle': 'Tap a button to answer.',
-             'image_url': test.result[1].url,
+             'image_url': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTusXq56YbmxTZbuW-FSx5-B6chBPPqHO8g-8W9C1uziJj1gwJZ4MjpfOR6VZEx9JiL0s8&usqp=CAU',
              'buttons': [
                {
                  'type': 'postback',
