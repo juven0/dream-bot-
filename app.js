@@ -105,7 +105,7 @@ function handleMessage(senderPsid, receivedMessage) {
       )
    
     response = {
-      'text' : 'url : '+ ur.result[1].url
+      'text' : 'url : '
     }
    
     
