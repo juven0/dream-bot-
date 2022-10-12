@@ -73,15 +73,17 @@ function handleMessage(senderPsid, receivedMessage) {
   let response;
 
   if (receivedMessage.text) {
-    
+    let imageUrl;
    (async function () {
-    const test = await GOOGLE_IMG_SCRAP({
+     await GOOGLE_IMG_SCRAP({
         search: "e-girl goth",
         query: {
             SIZE: GOOGLE_QUERY.SIZE.LARGE,
         },
        
         // excludeDomains: ["istockphoto.com", "alamy.com"]
+    }).then(res =>{
+      imageUrl = res.result[1].url;
     });
 
       // for (const key in test.result) {
@@ -92,7 +94,7 @@ function handleMessage(senderPsid, receivedMessage) {
       // }
 
   
-       urlImage = test.result[1].url
+       
     })();
 
     // response = {
