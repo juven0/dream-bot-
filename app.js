@@ -5,6 +5,7 @@
 
 // Use dotenv to read .env vars into Node
 require('dotenv').config();
+const { GOOGLE_IMG_SCRAP, GOOGLE_QUERY } = require('google-img-scrap');
 
 // Imports dependencies and set up http server
 const
@@ -72,7 +73,24 @@ function handleMessage(senderPsid, receivedMessage) {
   let response;
 
   if (receivedMessage.text) {
-   
+   (async function () {
+    const test = await GOOGLE_IMG_SCRAP({
+        search: "e-girl goth",
+        query: {
+            SIZE: GOOGLE_QUERY.SIZE.LARGE,
+        },
+       
+        // excludeDomains: ["istockphoto.com", "alamy.com"]
+    });
+
+      // for (const key in test.result) {
+      //     console.log(test.result[key].url)
+      // }
+      // for(let i = 0; i<20; i++){
+      //     console.log(test.result[1].url)
+      // }
+      console.log(test.result[1].url)
+    })();
     response = {
       'text': `by juveno bot : '${receivedMessage.text}'. Now send me an attachment!`
     };
