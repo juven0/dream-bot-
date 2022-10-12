@@ -89,11 +89,38 @@ function handleMessage(senderPsid, receivedMessage) {
       // for(let i = 0; i<20; i++){
       //     console.log(test.result[1].url)
       // }
+
+     response = {
+       'attachment': {
+         'type': 'template',
+         'payload': {
+           'template_type': 'generic',
+           'elements': [{
+             'title': 'Is this the right picture?',
+             'subtitle': 'Tap a button to answer.',
+             'image_url': test.result[1].url,
+             'buttons': [
+               {
+                 'type': 'postback',
+                 'title': 'Yes!',
+                 'payload': 'yes',
+               },
+               {
+                 'type': 'postback',
+                 'title': 'No!',
+                 'payload': 'no',
+               }
+             ],
+           }]
+         }
+       }
+     };
+
       console.log(test.result[1].url)
     })();
-    response = {
-      'text': `by juveno bot : '${receivedMessage.text}'. Now send me an attachment!`
-    };
+
+    
+    
   } else if (receivedMessage.attachments) {
 
     let attachmentUrl = receivedMessage.attachments[0].payload.url;
