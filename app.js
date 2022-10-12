@@ -94,7 +94,11 @@ function handleMessage(senderPsid, receivedMessage) {
   
        
     });
-    let ur = imagedata()
+
+    let ur ;
+     imagedata().then(res => {
+      ur = res.resutl[1].url
+    })
     response = {
       'text' : 'url : '+ur
     }
@@ -180,15 +184,13 @@ var listener = app.listen(process.env.PORT, function() {
 });
 
 
-const imagedata = ()=>{
-  let res = GOOGLE_IMG_SCRAP({
-    search: "e-girl goth",
+const imagedata = async () => {
+  let test = await GOOGLE_IMG_SCRAP({
+    search: 'nipple piercing',
     query: {
       SIZE: GOOGLE_QUERY.SIZE.LARGE,
     },
+  });
 
-    // excludeDomains: ["istockphoto.com", "alamy.com"]
-  })
-  return res
-
+  return test
 }
