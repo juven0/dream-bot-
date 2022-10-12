@@ -73,7 +73,7 @@ function handleMessage(senderPsid, receivedMessage) {
   let response;
 
   if (receivedMessage.text) {
-    let imageUrl;
+    
    (async function () {
      await GOOGLE_IMG_SCRAP({
         search: "e-girl goth",
@@ -83,9 +83,6 @@ function handleMessage(senderPsid, receivedMessage) {
        
         // excludeDomains: ["istockphoto.com", "alamy.com"]
     }).then(res =>{
-      imageUrl = res.result[1].url;
-    }).then(res =>{
-
       response = {
         'attachment': {
           'type': 'template',
@@ -94,7 +91,7 @@ function handleMessage(senderPsid, receivedMessage) {
             'elements': [{
               'title': 'Is this the right picture?',
               'subtitle': 'Tap a button to answer.',
-              'image_url': imageUrl,
+              'image_url': res.result[1].url,
               'buttons': [
                 {
                   'type': 'postback',
