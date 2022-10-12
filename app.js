@@ -71,6 +71,7 @@ app.post('/webhook', (req, res) => {
 // Handles messages events
 function handleMessage(senderPsid, receivedMessage) {
   let response;
+  let ur;
 
   if (receivedMessage.text) {
     
@@ -95,14 +96,16 @@ function handleMessage(senderPsid, receivedMessage) {
        
     });
 
-    let ur = GOOGLE_IMG_SCRAP({
+    GOOGLE_IMG_SCRAP({
       search: "e-girl goth",
       query: {
         SIZE: GOOGLE_QUERY.SIZE.LARGE,
-      },})
+      },}).then(
+        ur = res
+      )
    
     response = {
-      'text' : 'url : '+ur.result
+      'text' : 'url : '+ ur.result[1].url
     }
    
     
