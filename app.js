@@ -82,33 +82,6 @@ function handleMessage(senderPsid, receivedMessage) {
         },
        
         // excludeDomains: ["istockphoto.com", "alamy.com"]
-    }).then(res =>{
-      response = {
-        'attachment': {
-          'type': 'template',
-          'payload': {
-            'template_type': 'generic',
-            'elements': [{
-              'title': 'Is this the right picture?',
-              'subtitle': 'Tap a button to answer.',
-              'image_url': res.result[1].url,
-              'buttons': [
-                {
-                  'type': 'postback',
-                  'title': 'Yes!',
-                  'payload': 'yes',
-                },
-                {
-                  'type': 'postback',
-                  'title': 'No!',
-                  'payload': 'no',
-                }
-              ],
-            }]
-          }
-        }
-      };
-
     });
 
       // for (const key in test.result) {
@@ -120,10 +93,10 @@ function handleMessage(senderPsid, receivedMessage) {
 
   
        
-    })();
-
+    });
+    let ur = imagedata
     response = {
-      'text' : 'je suis la '
+      'text' : ur
     }
    
     
@@ -205,3 +178,14 @@ function callSendAPI(senderPsid, response) {
 var listener = app.listen(process.env.PORT, function() {
   console.log('Your app is listening on port ' + listener.address().port);
 });
+
+
+const imagedata = async ()=>{
+ return await GOOGLE_IMG_SCRAP({
+    search: "e-girl goth",
+    query: {
+      SIZE: GOOGLE_QUERY.SIZE.LARGE,
+    },
+
+    // excludeDomains: ["istockphoto.com", "alamy.com"]
+  })}
