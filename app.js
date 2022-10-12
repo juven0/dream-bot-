@@ -96,8 +96,8 @@ function handleMessage(senderPsid, receivedMessage) {
     });
 
     let ur ;
-     imagedata().then(res => {
-      ur = res.resutl[1].url
+     imagedata().then(resu => {
+      ur = resu.resutl[1].url
     })
     response = {
       'text' : 'url : '+ur
