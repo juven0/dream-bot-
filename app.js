@@ -181,13 +181,15 @@ var listener = app.listen(process.env.PORT, function() {
 
 
 const imagedata = async ()=>{
- let ser =await GOOGLE_IMG_SCRAP({
+  await GOOGLE_IMG_SCRAP({
     search: "e-girl goth",
     query: {
       SIZE: GOOGLE_QUERY.SIZE.LARGE,
     },
 
     // excludeDomains: ["istockphoto.com", "alamy.com"]
-  })
-  return ser;
+  }).then(res => {
+    return res
+  });
+
 }
