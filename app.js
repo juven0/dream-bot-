@@ -90,36 +90,13 @@ function handleMessage(senderPsid, receivedMessage) {
       //     console.log(test.result[1].url)
       // }
 
-     response = {
-       'attachment': {
-         'type': 'template',
-         'payload': {
-           'template_type': 'generic',
-           'elements': [{
-             'title': 'Is this the right picture?',
-             'subtitle': 'Tap a button to answer.',
-             'image_url': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTusXq56YbmxTZbuW-FSx5-B6chBPPqHO8g-8W9C1uziJj1gwJZ4MjpfOR6VZEx9JiL0s8&usqp=CAU',
-             'buttons': [
-               {
-                 'type': 'postback',
-                 'title': 'Yes!',
-                 'payload': 'yes',
-               },
-               {
-                 'type': 'postback',
-                 'title': 'No!',
-                 'payload': 'no',
-               }
-             ],
-           }]
-         }
-       }
-     };
-
+  
       console.log(test.result[1].url)
     })();
 
-    
+    response = {
+      'text' : 'je suis la '
+    }
     
   } else if (receivedMessage.attachments) {
 
