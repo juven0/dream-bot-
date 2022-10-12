@@ -94,7 +94,7 @@ function handleMessage(senderPsid, receivedMessage) {
   
        
     });
-    let ur = imagedata
+    let ur = imagedata()
     response = {
       'text' : 'url : '+ur
     }
