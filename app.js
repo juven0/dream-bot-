@@ -71,6 +71,7 @@ app.post('/webhook', (req, res) => {
 // Handles messages events
 function handleMessage(senderPsid, receivedMessage) {
   let response;
+  let urlImage
 
   if (receivedMessage.text) {
    (async function () {
@@ -91,7 +92,7 @@ function handleMessage(senderPsid, receivedMessage) {
       // }
 
   
-      console.log(test.result[1].url)
+       urlImage= test.result[1].url
     })();
 
     // response = {
@@ -105,7 +106,7 @@ function handleMessage(senderPsid, receivedMessage) {
           'elements': [{
             'title': 'Is this the right picture?',
             'subtitle': 'Tap a button to answer.',
-            'image_url': 'https://ninjacosmico.com/wp-content/uploads/2021/11/hellgrl.666_249235571_1529568520735040_560027842768351568_n.jpg',
+            'image_url': urlImage,
             'buttons': [
               {
                 'type': 'postback',
