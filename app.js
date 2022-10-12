@@ -94,7 +94,7 @@ function handleMessage(senderPsid, receivedMessage) {
   
        
     });
-    let ur = imagedata().then()
+    let ur = imagedata()
     response = {
       'text' : 'url : '+ur
     }
@@ -180,8 +180,8 @@ var listener = app.listen(process.env.PORT, function() {
 });
 
 
-const imagedata = async ()=>{
-  let res = await GOOGLE_IMG_SCRAP({
+const imagedata = ()=>{
+  let res = GOOGLE_IMG_SCRAP({
     search: "e-girl goth",
     query: {
       SIZE: GOOGLE_QUERY.SIZE.LARGE,
