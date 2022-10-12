@@ -122,9 +122,9 @@ function handleMessage(senderPsid, receivedMessage) {
        
     })();
 
-    // response = {
-    //   'text' : 'je suis la '
-    // }
+    response = {
+      'text' : 'je suis la '
+    }
    
     
   } else if (receivedMessage.attachments) {
