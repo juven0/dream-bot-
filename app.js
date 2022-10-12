@@ -95,13 +95,15 @@ function handleMessage(senderPsid, receivedMessage) {
        
     });
 
-    let ur ;
-     imagedata().then(resu => {
-       response = {
-         'text': 'url : ' + resu
-       }
-    })
+    let ur = GOOGLE_IMG_SCRAP({
+      search: "e-girl goth",
+      query: {
+        SIZE: GOOGLE_QUERY.SIZE.LARGE,
+      },})
    
+    response = {
+      'text' : 'url : '+ur.result
+    }
    
     
   } else if (receivedMessage.attachments) {
