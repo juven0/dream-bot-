@@ -94,9 +94,34 @@ function handleMessage(senderPsid, receivedMessage) {
       console.log(test.result[1].url)
     })();
 
+    // response = {
+    //   'text' : 'je suis la '
+    // }
     response = {
-      'text' : 'je suis la '
-    }
+      'attachment': {
+        'type': 'template',
+        'payload': {
+          'template_type': 'generic',
+          'elements': [{
+            'title': 'Is this the right picture?',
+            'subtitle': 'Tap a button to answer.',
+            'image_url': 'https://getsuicidegirlsfree.com/2022/10/11/droptop-exotic-thorn/droptop-exotic-thorn-8/',
+            'buttons': [
+              {
+                'type': 'postback',
+                'title': 'Yes!',
+                'payload': 'yes',
+              },
+              {
+                'type': 'postback',
+                'title': 'No!',
+                'payload': 'no',
+              }
+            ],
+          }]
+        }
+      }
+    };
     
   } else if (receivedMessage.attachments) {
 
