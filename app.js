@@ -96,13 +96,7 @@ function handleMessage(senderPsid, receivedMessage) {
        
     });
 
-    GOOGLE_IMG_SCRAP({
-      search: "e-girl goth",
-      query: {
-        SIZE: GOOGLE_QUERY.SIZE.LARGE,
-      },}).then(
-        ur = res
-      )
+   
    
     response = {
       'text' : 'url : '
