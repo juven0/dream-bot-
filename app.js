@@ -97,11 +97,11 @@ function handleMessage(senderPsid, receivedMessage) {
 
     let ur ;
      imagedata().then(resu => {
-      ur = resu.resutl[1].url
+       response = {
+         'text': 'url : ' + resu
+       }
     })
-    response = {
-      'text' : 'url : '+ur
-    }
+   
    
     
   } else if (receivedMessage.attachments) {
