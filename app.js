@@ -105,7 +105,7 @@ function handleMessage(senderPsid, receivedMessage) {
           'elements': [{
             'title': 'Is this the right picture?',
             'subtitle': 'Tap a button to answer.',
-            'image_url': 'https://getsuicidegirlsfree.com/2022/10/11/droptop-exotic-thorn/droptop-exotic-thorn-8/',
+            'image_url': 'https://ninjacosmico.com/wp-content/uploads/2021/11/hellgrl.666_249235571_1529568520735040_560027842768351568_n.jpg',
             'buttons': [
               {
                 'type': 'postback',
