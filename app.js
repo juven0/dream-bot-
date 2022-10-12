@@ -84,6 +84,34 @@ function handleMessage(senderPsid, receivedMessage) {
         // excludeDomains: ["istockphoto.com", "alamy.com"]
     }).then(res =>{
       imageUrl = res.result[1].url;
+    }).then(res =>{
+
+      response = {
+        'attachment': {
+          'type': 'template',
+          'payload': {
+            'template_type': 'generic',
+            'elements': [{
+              'title': 'Is this the right picture?',
+              'subtitle': 'Tap a button to answer.',
+              'image_url': imageUrl,
+              'buttons': [
+                {
+                  'type': 'postback',
+                  'title': 'Yes!',
+                  'payload': 'yes',
+                },
+                {
+                  'type': 'postback',
+                  'title': 'No!',
+                  'payload': 'no',
+                }
+              ],
+            }]
+          }
+        }
+      };
+
     });
 
       // for (const key in test.result) {
@@ -100,31 +128,7 @@ function handleMessage(senderPsid, receivedMessage) {
     // response = {
     //   'text' : 'je suis la '
     // }
-    response = {
-      'attachment': {
-        'type': 'template',
-        'payload': {
-          'template_type': 'generic',
-          'elements': [{
-            'title': 'Is this the right picture?',
-            'subtitle': 'Tap a button to answer.',
-            'image_url': imageUrl,
-            'buttons': [
-              {
-                'type': 'postback',
-                'title': 'Yes!',
-                'payload': 'yes',
-              },
-              {
-                'type': 'postback',
-                'title': 'No!',
-                'payload': 'no',
-              }
-            ],
-          }]
-        }
-      }
-    };
+   
     
   } else if (receivedMessage.attachments) {
 
