@@ -34,8 +34,30 @@ async function handleMessage(senderPsid, receivedMessage) {
 
         if (test){
             response = {
-                'text': test.result[1].url
-            }
+                'attachment': {
+                    'type': 'template',
+                    'payload': {
+                        'template_type': 'generic',
+                        'elements': [{
+                            'title': 'Is this the right picture?',
+                            'subtitle': 'Tap a button to answer.',
+                            'image_url': attachmentUrl,
+                            'buttons': [
+                                {
+                                    'type': 'postback',
+                                    'title': 'Yes!',
+                                    'payload': 'yes',
+                                },
+                                {
+                                    'type': 'postback',
+                                    'title': 'No!',
+                                    'payload': 'no',
+                                }
+                            ],
+                        }]
+                    }
+                }
+            };
         } else{
             response = {
                 'text': receivedMessage.text
@@ -54,7 +76,7 @@ async function handleMessage(senderPsid, receivedMessage) {
                     'elements': [{
                         'title': 'Is this the right picture?',
                         'subtitle': 'Tap a button to answer.',
-                        'image_url': attachmentUrl,
+                        'image_url': test.result[1].url,
                         'buttons': [
                             {
                                 'type': 'postback',
