@@ -37,7 +37,7 @@ function handleMessage(senderPsid, receivedMessage) {
 
 
         response = {
-            'text': 'mankasitra 🥺 '
+            'text': receivedMessage.text
         }
 
 
