@@ -74,7 +74,6 @@ app.post('/webhook', (req, res) => {
   }
 });
 
-// Handles messages events
 
 function handlePostback(senderPsid, receivedPostback) {
   let response;
