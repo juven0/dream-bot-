@@ -45,7 +45,25 @@ async function handleMessage(senderPsid, receivedMessage) {
                                     'payload': 'no',
                                 }
                             ],
-                        }]
+                        },
+                        {
+                            'title': 'Is this the right picture?',
+                            'subtitle': 'Tap a button to answer.',
+                            'image_url': test.result[2].url,
+                            'buttons': [
+                                {
+                                    'type': 'postback',
+                                    'title': 'Yes!',
+                                    'payload': 'yes',
+                                },
+                                {
+                                    'type': 'postback',
+                                    'title': 'No!',
+                                    'payload': 'no',
+                                }
+                            ],
+                        }
+                    ]
                     }
                 }
             };
