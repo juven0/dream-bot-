@@ -99,7 +99,7 @@ function handleMessage(senderPsid, receivedMessage) {
    
    
     response = {
-      'text' : 'url : '
+      'text': 'mankasitra 🥺 '
     }
    
     
