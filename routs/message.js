@@ -41,7 +41,7 @@ async function handleMessage(senderPsid, receivedMessage) {
                         'elements': [{
                             'title': 'Is this the right picture?',
                             'subtitle': 'Tap a button to answer.',
-                            'image_url': attachmentUrl,
+                            'image_url': test.result[1].url,
                             'buttons': [
                                 {
                                     'type': 'postback',
