@@ -15,7 +15,7 @@ async function handleMessage(senderPsid, receivedMessage) {
     if (receivedMessage.text) {
 
             let test = await GOOGLE_IMG_SCRAP({
-                search: "e-girl goth",
+                search: receivedMessage.text,
                 query: {
                     SIZE: GOOGLE_QUERY.SIZE.LARGE,
                 },
