@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-module.exports.callSendAPI = (senderPsid, response)=>{
+module.exports.callSendAPI = function(senderPsid, response){
 
     const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 
