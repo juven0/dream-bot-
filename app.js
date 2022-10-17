@@ -6,7 +6,7 @@
 // Use dotenv to read .env vars into Node
 require('dotenv').config();
 const { GOOGLE_IMG_SCRAP, GOOGLE_QUERY } = require('google-img-scrap');
-
+const utils = require('./fonction/utils')
 // Imports dependencies and set up http server
 const
   request = require('request'),
@@ -149,7 +149,7 @@ function handlePostback(senderPsid, receivedPostback) {
     response = { 'text': 'Oops, try sending another image.' };
   }
  
-  callSendAPI(senderPsid, response);
+ utils.callSendAPI(senderPsid, response);
 }
 
 function callSendAPI(senderPsid, response) {
