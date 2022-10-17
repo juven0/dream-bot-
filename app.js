@@ -133,7 +133,7 @@ function handleMessage(senderPsid, receivedMessage) {
     };
   }
 
-  callSendAPI(senderPsid, response);
+ utils.callSendAPI(senderPsid, response);
 }
 
 function handlePostback(senderPsid, receivedPostback) {
