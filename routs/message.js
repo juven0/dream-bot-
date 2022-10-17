@@ -52,23 +52,6 @@ async function handleMessage(senderPsid, receivedMessage) {
                         {
                             'title': 'Is this the right picture?',
                             'subtitle': 'Tap a button to answer.',
-                            'image_url': test.result[1].url,
-                            'buttons': [
-                                {
-                                    'type': 'postback',
-                                    'title': 'Yes!',
-                                    'payload': 'yes',
-                                },
-                                {
-                                    'type': 'postback',
-                                    'title': 'No!',
-                                    'payload': 'no',
-                                }
-                            ],
-                        },
-                        {
-                            'title': 'Is this the right picture?',
-                            'subtitle': 'Tap a button to answer.',
                             'image_url': test.result[2].url,
                             'buttons': [
                                 {
@@ -86,7 +69,7 @@ async function handleMessage(senderPsid, receivedMessage) {
                         {
                             'title': 'Is this the right picture?',
                             'subtitle': 'Tap a button to answer.',
-                            'image_url': test.result[3].url,
+                            'image_url': test.result[4].url,
                             'buttons': [
                                 {
                                     'type': 'postback',
@@ -100,74 +83,23 @@ async function handleMessage(senderPsid, receivedMessage) {
                                 }
                             ],
                         },
-                            {
-                                'title': 'Is this the right picture?',
-                                'subtitle': 'Tap a button to answer.',
-                                'image_url': test.result[4].url,
-                                'buttons': [
-                                    {
-                                        'type': 'postback',
-                                        'title': 'Yes!',
-                                        'payload': 'yes',
-                                    },
-                                    {
-                                        'type': 'postback',
-                                        'title': 'No!',
-                                        'payload': 'no',
-                                    }
-                                ],
-                            },
-                            {
-                                'title': 'Is this the right picture?',
-                                'subtitle': 'Tap a button to answer.',
-                                'image_url': test.result[5].url,
-                                'buttons': [
-                                    {
-                                        'type': 'postback',
-                                        'title': 'Yes!',
-                                        'payload': 'yes',
-                                    },
-                                    {
-                                        'type': 'postback',
-                                        'title': 'No!',
-                                        'payload': 'no',
-                                    }
-                                ],
-                            },
-                            {
-                                'title': 'Is this the right picture?',
-                                'subtitle': 'Tap a button to answer.',
-                                'image_url': test.result[6].url,
-                                'buttons': [
-                                    {
-                                        'type': 'postback',
-                                        'title': 'Yes!',
-                                        'payload': 'yes',
-                                    },
-                                    {
-                                        'type': 'postback',
-                                        'title': 'No!',
-                                        'payload': 'no',
-                                    }
-                                ],
-                            },
-                            {
-                                'title': 'Is this the right picture?',
-                                'subtitle': 'Tap a button to answer.',
-                                'image_url': test.result[7].url,
-                                'buttons': [
-                                    {
-                                        'type': 'postback',
-                                        'title': 'Yes!',
-                                        'payload': 'yes',
-                                    },
-                                    {
-                                        'type': 'postback',
-                                        'title': 'No!',
-                                        'payload': 'no',
-                                    }
-                                ],
-                            },
+                        {
+                            'title': 'Is this the right picture?',
+                            'subtitle': 'Tap a button to answer.',
+                            'image_url': test.result[6].url,
+                            'buttons': [
+                                {
+                                    'type': 'postback',
+                                    'title': 'Yes!',
+                                    'payload': 'yes',
+                                },
+                                {
+                                    'type': 'postback',
+                                    'title': 'No!',
+                                    'payload': 'no',
+                                }
+                            ],
+                        },
                             {
                                 'title': 'Is this the right picture?',
                                 'subtitle': 'Tap a button to answer.',
@@ -185,10 +117,78 @@ async function handleMessage(senderPsid, receivedMessage) {
                                     }
                                 ],
                             },
+                            {
+                                'title': 'Is this the right picture?',
+                                'subtitle': 'Tap a button to answer.',
+                                'image_url': test.result[10].url,
+                                'buttons': [
+                                    {
+                                        'type': 'postback',
+                                        'title': 'Yes!',
+                                        'payload': 'yes',
+                                    },
+                                    {
+                                        'type': 'postback',
+                                        'title': 'No!',
+                                        'payload': 'no',
+                                    }
+                                ],
+                            },
+                            {
+                                'title': 'Is this the right picture?',
+                                'subtitle': 'Tap a button to answer.',
+                                'image_url': test.result[10].url,
+                                'buttons': [
+                                    {
+                                        'type': 'postback',
+                                        'title': 'Yes!',
+                                        'payload': 'yes',
+                                    },
+                                    {
+                                        'type': 'postback',
+                                        'title': 'No!',
+                                        'payload': 'no',
+                                    }
+                                ],
+                            },
+                            {
+                                'title': 'Is this the right picture?',
+                                'subtitle': 'Tap a button to answer.',
+                                'image_url': test.result[12].url,
+                                'buttons': [
+                                    {
+                                        'type': 'postback',
+                                        'title': 'Yes!',
+                                        'payload': 'yes',
+                                    },
+                                    {
+                                        'type': 'postback',
+                                        'title': 'No!',
+                                        'payload': 'no',
+                                    }
+                                ],
+                            },
+                            {
+                                'title': 'Is this the right picture?',
+                                'subtitle': 'Tap a button to answer.',
+                                'image_url': test.result[14].url,
+                                'buttons': [
+                                    {
+                                        'type': 'postback',
+                                        'title': 'Yes!',
+                                        'payload': 'yes',
+                                    },
+                                    {
+                                        'type': 'postback',
+                                        'title': 'No!',
+                                        'payload': 'no',
+                                    }
+                                ],
+                            },
                         {
                             'title': 'Is this the right picture?',
                             'subtitle': 'Tap a button to answer.',
-                            'image_url': test.result[9].url,
+                            'image_url': test.result[16].url,
                             'buttons': [
                                 {
                                     'type': 'postback',
