@@ -56,12 +56,13 @@ app.post('/webhook', (req, res) => {
       let senderPsid = webhookEvent.sender.id;
       console.log('Sender PSID: ' + senderPsid);
 
-      if (webhookEvent.message) {
-        message.messageRouters(senderPsid, webhookEvent)
-        //handleMessage(senderPsid, webhookEvent.message);
-      } else if (webhookEvent.postback) {
-        handlePostback(senderPsid, webhookEvent.postback);
-      }
+      message.messageRouters(senderPsid, webhookEvent)
+      // if (webhookEvent.message) {
+      //   message.messageRouters(senderPsid, webhookEvent)
+      //   //handleMessage(senderPsid, webhookEvent.message);
+      // } else if (webhookEvent.postback) {
+      //   handlePostback(senderPsid, webhookEvent.postback);
+      // }
     });
 
     res.status(200).send('EVENT_RECEIVED');
