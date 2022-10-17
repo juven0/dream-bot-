@@ -23,15 +23,6 @@ async function handleMessage(senderPsid, receivedMessage) {
                 excludeDomains: ["istockphoto.com", "alamy.com"]
            });
 
-            for (const key in test.result) {
-                console.log(test.result[key].url)
-            }
-            for(let i = 0; i<20; i++){
-                console.log(test.result[1].url)
-            }
-
-
-
         if (test){
             response = {
                 'attachment': {
