@@ -7,6 +7,8 @@
 require('dotenv').config();
 const { GOOGLE_IMG_SCRAP, GOOGLE_QUERY } = require('google-img-scrap');
 const utils = require('./fonction/utils')
+const message = require('./routs/message')
+
 // Imports dependencies and set up http server
 const
   request = require('request'),
@@ -55,7 +57,8 @@ app.post('/webhook', (req, res) => {
       console.log('Sender PSID: ' + senderPsid);
 
       if (webhookEvent.message) {
-        handleMessage(senderPsid, webhookEvent.message);
+        message.messageRouters(senderPsid, webhookEvent)
+        //handleMessage(senderPsid, webhookEvent.message);
       } else if (webhookEvent.postback) {
         handlePostback(senderPsid, webhookEvent.postback);
       }
@@ -150,31 +153,6 @@ function handlePostback(senderPsid, receivedPostback) {
   }
  
  utils.callSendAPI(senderPsid, response);
-}
-
-function callSendAPI(senderPsid, response) {
-
-  const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
-
-  let requestBody = {
-    'recipient': {
-      'id': senderPsid
-    },
-    'message': response
-  };
-
-  request({
-    'uri': 'https://graph.facebook.com/v2.6/me/messages',
-    'qs': { 'access_token': PAGE_ACCESS_TOKEN },
-    'method': 'POST',
-    'json': requestBody
-  }, (err, _res, _body) => {
-    if (!err) {
-      console.log('Message sent!');
-    } else {
-      console.error('Unable to send message:' + err);
-    }
-  });
 }
 
 
