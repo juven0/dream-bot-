@@ -38,25 +38,24 @@ async function handleMessage(senderPsid, receivedMessage) {
                                 {
                                     'type': 'postback',
                                     'title': 'voir l\'image',
-                                    'payload': test.result[0].url,
+                                    'payload': {
+                                        'type': 'google image',
+                                        url: test.result[0].url
+                                    },
                                 }
                             ],
                         },
                         {
-                            'title': 'Is this the right picture?',
-                            'subtitle': 'Tap a button to answer.',
                             'image_url': test.result[2].url,
                             'buttons': [
                                 {
                                     'type': 'postback',
-                                    'title': 'Yes!',
-                                    'payload': 'yes',
+                                    'title': 'voir l\'image',
+                                    'payload': {
+                                        'type': 'google image',
+                                        url: test.result[3].url
+                                    },
                                 },
-                                {
-                                    'type': 'postback',
-                                    'title': 'No!',
-                                    'payload': 'no',
-                                }
                             ],
                         },
                         {
@@ -67,13 +66,12 @@ async function handleMessage(senderPsid, receivedMessage) {
                                 {
                                     'type': 'postback',
                                     'title': 'Yes!',
-                                    'payload': 'yes',
+                                    'payload': {
+                                        'type': 'google image',
+                                        url: test.result[4].url
+                                    },
                                 },
-                                {
-                                    'type': 'postback',
-                                    'title': 'No!',
-                                    'payload': 'no',
-                                }
+                                
                             ],
                         },
                         {
