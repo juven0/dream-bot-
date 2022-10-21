@@ -80,7 +80,7 @@ function handlePostback(senderPsid, receivedPostback) {
 
 
   let payload = receivedPostback.payload;
-
+  response = { 'text': payload };
   
   if (payload === 'yes') {
     response = { 'text': 'Thanks!' };
