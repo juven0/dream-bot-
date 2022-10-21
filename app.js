@@ -81,7 +81,7 @@ function handlePostback(senderPsid, receivedPostback) {
 
 
   let payload = receivedPostback.payload;
-  response = { 'text': payload };
+  response = { 'text': 'votre image est sur cette url' +payload };
   
   if (payload === 'yes') {
     response = { 'text': 'Thanks!' };
@@ -98,13 +98,4 @@ var listener = app.listen(process.env.PORT, function() {
 });
 
 
-const imagedata = async () => {
-  let test = await GOOGLE_IMG_SCRAP({
-    search: 'nipple piercing',
-    query: {
-      SIZE: GOOGLE_QUERY.SIZE.LARGE,
-    },
-  });
 
-  return test
-}
