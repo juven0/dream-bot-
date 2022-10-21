@@ -39,10 +39,8 @@ async function handleMessage(senderPsid, receivedMessage) {
                                 {
                                     'type': 'postback',
                                     'title': 'voir l\'image',
-                                    'payload': {
-                                        'type': 'google image',
-                                        'url': test.result[0].url
-                                    },
+                                    'payload': test.result[0].url,
+                                    
                                 }
                             ],
                         },
