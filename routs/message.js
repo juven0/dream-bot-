@@ -75,8 +75,7 @@ async function handleMessage(senderPsid, receivedMessage) {
                         //     ],
                         // },
                         {
-                            
-                            
+                            'title': 'Is this the right picture?',
                             'image_url': test.result[6].url,
                             'buttons': [
                                 {
