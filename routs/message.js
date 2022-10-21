@@ -32,48 +32,49 @@ async function handleMessage(senderPsid, receivedMessage) {
                     'type': 'template',
                     'payload': {
                         'template_type': 'generic',
-                        'elements': [//{
-                        //     'image_url': test.result[0].url,
-                        //     'buttons': [
-                        //         {
-                        //             'type': 'postback',
-                        //             'title': 'voir l\'image',
-                        //             'payload': {
-                        //                 'type': 'google image',
-                        //                 url: test.result[0].url
-                        //             },
-                        //         }
-                        //     ],
-                        // },
-                        // {
-                        //     'image_url': test.result[2].url,
-                        //     'buttons': [
-                        //         {
-                        //             'type': 'postback',
-                        //             'title': 'voir l\'image',
-                        //             'payload': {
-                        //                 'type': 'google image',
-                        //                 url: test.result[3].url
-                        //             },
-                        //         },
-                        //     ],
-                        // },
-                        // {
-                        //     'title': 'Is this the right picture?',
-                        //     'subtitle': 'Tap a button to answer.',
-                        //     'image_url': test.result[4].url,
-                        //     'buttons': [
-                        //         {
-                        //             'type': 'postback',
-                        //             'title': 'Yes!',
-                        //             'payload': {
-                        //                 'type': 'google image',
-                        //                 url: test.result[4].url
-                        //             },
-                        //         },
+                        'elements': [{
+                            'title': 'Is this the right picture?',
+                            'image_url': test.result[0].url,
+                            'buttons': [
+                                {
+                                    'type': 'postback',
+                                    'title': 'voir l\'image',
+                                    'payload': {
+                                        'type': 'google image',
+                                        'url': test.result[0].url
+                                    },
+                                }
+                            ],
+                        },
+                        {
+                            'title': 'Is this the right picture?',
+                            'image_url': test.result[2].url,
+                            'buttons': [
+                                {
+                                    'type': 'postback',
+                                    'title': 'voir l\'image',
+                                    'payload': {
+                                        'type': 'google image',
+                                        'url': test.result[3].url
+                                    },
+                                },
+                            ],
+                        },
+                        {
+                            'title': 'Is this the right picture?',
+                            'image_url': test.result[4].url,
+                            'buttons': [
+                                {
+                                    'type': 'postback',
+                                    'title': 'voir l\'image',
+                                    'payload': {
+                                        'type': 'google image',
+                                        'url': test.result[4].url
+                                    },
+                                },
                                 
-                        //     ],
-                        // },
+                            ],
+                        },
                         {
                             'title': 'Is this the right picture?',
                             'image_url': test.result[6].url,
@@ -81,7 +82,10 @@ async function handleMessage(senderPsid, receivedMessage) {
                                 {
                                     'type': 'postback',
                                     'title': 'voir l\'image ?',
-                                    'payload': 'yes',
+                                    'payload': {
+                                        'type': 'google image',
+                                        'url': test.result[6].url
+                                    },
                                 },
                                
                             ],
@@ -93,14 +97,13 @@ async function handleMessage(senderPsid, receivedMessage) {
                                 'buttons': [
                                     {
                                         'type': 'postback',
-                                        'title': 'Yes!',
-                                        'payload': 'yes',
+                                        'title': 'voir l\'image',
+                                        'payload': {
+                                            'type': 'google image',
+                                            'url': test.result[8].url
+                                        },
                                     },
-                                    {
-                                        'type': 'postback',
-                                        'title': 'No!',
-                                        'payload': 'no',
-                                    }
+                                 
                                 ],
                             },
                             {
@@ -110,14 +113,13 @@ async function handleMessage(senderPsid, receivedMessage) {
                                 'buttons': [
                                     {
                                         'type': 'postback',
-                                        'title': 'Yes!',
-                                        'payload': 'yes',
+                                        'title': 'voir l\'image',
+                                        'payload': {
+                                            'type': 'google image',
+                                            'url': test.result[10].url
+                                        },
                                     },
-                                    {
-                                        'type': 'postback',
-                                        'title': 'No!',
-                                        'payload': 'no',
-                                    }
+                                    
                                 ],
                             },
                             {
@@ -127,14 +129,13 @@ async function handleMessage(senderPsid, receivedMessage) {
                                 'buttons': [
                                     {
                                         'type': 'postback',
-                                        'title': 'Yes!',
-                                        'payload': 'yes',
+                                        'title': 'voir l\'image',
+                                        'payload': {
+                                            'type': 'google image',
+                                            'url': test.result[4].url
+                                        },
                                     },
-                                    {
-                                        'type': 'postback',
-                                        'title': 'No!',
-                                        'payload': 'no',
-                                    }
+                                    
                                 ],
                             },
                             {
@@ -144,14 +145,13 @@ async function handleMessage(senderPsid, receivedMessage) {
                                 'buttons': [
                                     {
                                         'type': 'postback',
-                                        'title': 'Yes!',
-                                        'payload': 'yes',
+                                        'title': 'voir l\'image',
+                                        'payload': {
+                                            'type': 'google image',
+                                            'url': test.result[12].url
+                                        },
                                     },
-                                    {
-                                        'type': 'postback',
-                                        'title': 'No!',
-                                        'payload': 'no',
-                                    }
+                                   
                                 ],
                             },
                             {
@@ -161,14 +161,13 @@ async function handleMessage(senderPsid, receivedMessage) {
                                 'buttons': [
                                     {
                                         'type': 'postback',
-                                        'title': 'Yes!',
-                                        'payload': 'yes',
+                                        'title': 'voir l\'image',
+                                        'payload': {
+                                            'type': 'google image',
+                                            'url': test.result[14].url
+                                        },
                                     },
-                                    {
-                                        'type': 'postback',
-                                        'title': 'No!',
-                                        'payload': 'no',
-                                    }
+                                   
                                 ],
                             },
                         {
@@ -178,14 +177,13 @@ async function handleMessage(senderPsid, receivedMessage) {
                             'buttons': [
                                 {
                                     'type': 'postback',
-                                    'title': 'Yes!',
-                                    'payload': 'yes',
+                                    'title': 'voir l\'image',
+                                    'payload': {
+                                        'type': 'google image',
+                                        'url': test.result[16].url
+                                    },
                                 },
-                                {
-                                    'type': 'postback',
-                                    'title': 'No!',
-                                    'payload': 'no',
-                                }
+                              
                             ],
                         }
                     ]
