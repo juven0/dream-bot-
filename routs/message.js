@@ -39,7 +39,7 @@ async function handleMessage(senderPsid, receivedMessage) {
                                 {
                                     'type': 'postback',
                                     'title': 'voir l\'image',
-                                    'payload': test.result[0].url,
+                                    'payload': [test.result[0].url,'goole'],
                                     
                                 }
                             ],
