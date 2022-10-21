@@ -81,14 +81,10 @@ async function handleMessage(senderPsid, receivedMessage) {
                             'buttons': [
                                 {
                                     'type': 'postback',
-                                    'title': 'Yes!',
+                                    'title': 'voir l\'image ?',
                                     'payload': 'yes',
                                 },
-                                {
-                                    'type': 'postback',
-                                    'title': 'No!',
-                                    'payload': 'no',
-                                }
+                               
                             ],
                         },
                             {
