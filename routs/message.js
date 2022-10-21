@@ -32,48 +32,48 @@ async function handleMessage(senderPsid, receivedMessage) {
                     'type': 'template',
                     'payload': {
                         'template_type': 'generic',
-                        'elements': [{
-                            'image_url': test.result[0].url,
-                            'buttons': [
-                                {
-                                    'type': 'postback',
-                                    'title': 'voir l\'image',
-                                    'payload': {
-                                        'type': 'google image',
-                                        url: test.result[0].url
-                                    },
-                                }
-                            ],
-                        },
-                        {
-                            'image_url': test.result[2].url,
-                            'buttons': [
-                                {
-                                    'type': 'postback',
-                                    'title': 'voir l\'image',
-                                    'payload': {
-                                        'type': 'google image',
-                                        url: test.result[3].url
-                                    },
-                                },
-                            ],
-                        },
-                        {
-                            'title': 'Is this the right picture?',
-                            'subtitle': 'Tap a button to answer.',
-                            'image_url': test.result[4].url,
-                            'buttons': [
-                                {
-                                    'type': 'postback',
-                                    'title': 'Yes!',
-                                    'payload': {
-                                        'type': 'google image',
-                                        url: test.result[4].url
-                                    },
-                                },
+                        'elements': [//{
+                        //     'image_url': test.result[0].url,
+                        //     'buttons': [
+                        //         {
+                        //             'type': 'postback',
+                        //             'title': 'voir l\'image',
+                        //             'payload': {
+                        //                 'type': 'google image',
+                        //                 url: test.result[0].url
+                        //             },
+                        //         }
+                        //     ],
+                        // },
+                        // {
+                        //     'image_url': test.result[2].url,
+                        //     'buttons': [
+                        //         {
+                        //             'type': 'postback',
+                        //             'title': 'voir l\'image',
+                        //             'payload': {
+                        //                 'type': 'google image',
+                        //                 url: test.result[3].url
+                        //             },
+                        //         },
+                        //     ],
+                        // },
+                        // {
+                        //     'title': 'Is this the right picture?',
+                        //     'subtitle': 'Tap a button to answer.',
+                        //     'image_url': test.result[4].url,
+                        //     'buttons': [
+                        //         {
+                        //             'type': 'postback',
+                        //             'title': 'Yes!',
+                        //             'payload': {
+                        //                 'type': 'google image',
+                        //                 url: test.result[4].url
+                        //             },
+                        //         },
                                 
-                            ],
-                        },
+                        //     ],
+                        // },
                         {
                             'title': 'Is this the right picture?',
                             'subtitle': 'Tap a button to answer.',
