@@ -46,146 +46,144 @@ async function handleMessage(senderPsid, receivedMessage) {
                                 }
                             ],
                         },
-                        {
-                            'title': 'Is this the right picture?',
-                            'image_url': test.result[2].url,
-                            'buttons': [
-                                {
-                                    'type': 'postback',
-                                    'title': 'voir l\'image',
-                                    'payload': {
-                                        'type': 'google image',
-                                        'url': test.result[3].url
-                                    },
-                                },
-                            ],
-                        },
-                        {
-                            'title': 'Is this the right picture?',
-                            'image_url': test.result[4].url,
-                            'buttons': [
-                                {
-                                    'type': 'postback',
-                                    'title': 'voir l\'image',
-                                    'payload': {
-                                        'type': 'google image',
-                                        'url': test.result[4].url
-                                    },
-                                },
+                        // {
+                        //     'title': 'Is this the right picture?',
+                        //     'image_url': test.result[2].url,
+                        //     'buttons': [
+                        //         {
+                        //             'type': 'postback',
+                        //             'title': 'voir l\'image',
+                        //             'payload': {
+                        //                 'type': 'google image',
+                        //                 'url': test.result[3].url
+                        //             },
+                        //         },
+                        //     ],
+                        // },
+                        // {
+                        //     'title': 'Is this the right picture?',
+                        //     'image_url': test.result[4].url,
+                        //     'buttons': [
+                        //         {
+                        //             'type': 'postback',
+                        //             'title': 'voir l\'image',
+                        //             'payload': {
+                        //                 'type': 'google image',
+                        //                 'url': test.result[4].url
+                        //             },
+                        //         },
                                 
-                            ],
-                        },
-                        {
-                            'title': 'Is this the right picture?',
-                            'image_url': test.result[6].url,
-                            'buttons': [
-                                {
-                                    'type': 'postback',
-                                    'title': 'voir l\'image ?',
-                                    'payload': {
-                                        'type': 'google image',
-                                        'url': test.result[6].url
-                                    },
-                                },
+                        //     ],
+                        // },
+                        // {
+                        //     'title': 'Is this the right picture?',
+                        //     'image_url': test.result[6].url,
+                        //     'buttons': [
+                        //         {
+                        //             'type': 'postback',
+                        //             'title': 'voir l\'image ?',
+                        //             'payload': {
+                        //                 'type': 'google image',
+                        //                 'url': test.result[6].url
+                        //             },
+                        //         },
                                
-                            ],
-                        },
-                            {
-                                'title': 'Is this the right picture?',
-                                'subtitle': 'Tap a button to answer.',
-                                'image_url': test.result[8].url,
-                                'buttons': [
-                                    {
-                                        'type': 'postback',
-                                        'title': 'voir l\'image',
-                                        'payload': {
-                                            'type': 'google image',
-                                            'url': test.result[8].url
-                                        },
-                                    },
+                        //     ],
+                        // },
+                        //     {
+                        //         'title': 'Is this the right picture?',
+                        //         'image_url': test.result[8].url,
+                        //         'buttons': [
+                        //             {
+                        //                 'type': 'postback',
+                        //                 'title': 'voir l\'image',
+                        //                 'payload': {
+                        //                     'type': 'google image',
+                        //                     'url': test.result[8].url
+                        //                 },
+                        //             },
                                  
-                                ],
-                            },
-                            {
-                                'title': 'Is this the right picture?',
-                                'subtitle': 'Tap a button to answer.',
-                                'image_url': test.result[10].url,
-                                'buttons': [
-                                    {
-                                        'type': 'postback',
-                                        'title': 'voir l\'image',
-                                        'payload': {
-                                            'type': 'google image',
-                                            'url': test.result[10].url
-                                        },
-                                    },
+                        //         ],
+                        //     },
+                        //     {
+                        //         'title': 'Is this the right picture?',
+                        //         'image_url': test.result[10].url,
+                        //         'buttons': [
+                        //             {
+                        //                 'type': 'postback',
+                        //                 'title': 'voir l\'image',
+                        //                 'payload': {
+                        //                     'type': 'google image',
+                        //                     'url': test.result[10].url
+                        //                 },
+                        //             },
                                     
-                                ],
-                            },
-                            {
-                                'title': 'Is this the right picture?',
-                                'subtitle': 'Tap a button to answer.',
-                                'image_url': test.result[10].url,
-                                'buttons': [
-                                    {
-                                        'type': 'postback',
-                                        'title': 'voir l\'image',
-                                        'payload': {
-                                            'type': 'google image',
-                                            'url': test.result[4].url
-                                        },
-                                    },
+                        //         ],
+                        //     },
+                        //     {
+                        //         'title': 'Is this the right picture?',
+                        //         'subtitle': 'Tap a button to answer.',
+                        //         'image_url': test.result[10].url,
+                        //         'buttons': [
+                        //             {
+                        //                 'type': 'postback',
+                        //                 'title': 'voir l\'image',
+                        //                 'payload': {
+                        //                     'type': 'google image',
+                        //                     'url': test.result[4].url
+                        //                 },
+                        //             },
                                     
-                                ],
-                            },
-                            {
-                                'title': 'Is this the right picture?',
-                                'subtitle': 'Tap a button to answer.',
-                                'image_url': test.result[12].url,
-                                'buttons': [
-                                    {
-                                        'type': 'postback',
-                                        'title': 'voir l\'image',
-                                        'payload': {
-                                            'type': 'google image',
-                                            'url': test.result[12].url
-                                        },
-                                    },
+                        //         ],
+                        //     },
+                        //     {
+                        //         'title': 'Is this the right picture?',
+                        //         'subtitle': 'Tap a button to answer.',
+                        //         'image_url': test.result[12].url,
+                        //         'buttons': [
+                        //             {
+                        //                 'type': 'postback',
+                        //                 'title': 'voir l\'image',
+                        //                 'payload': {
+                        //                     'type': 'google image',
+                        //                     'url': test.result[12].url
+                        //                 },
+                        //             },
                                    
-                                ],
-                            },
-                            {
-                                'title': 'Is this the right picture?',
-                                'subtitle': 'Tap a button to answer.',
-                                'image_url': test.result[14].url,
-                                'buttons': [
-                                    {
-                                        'type': 'postback',
-                                        'title': 'voir l\'image',
-                                        'payload': {
-                                            'type': 'google image',
-                                            'url': test.result[14].url
-                                        },
-                                    },
+                        //         ],
+                        //     },
+                        //     {
+                        //         'title': 'Is this the right picture?',
+                        //         'subtitle': 'Tap a button to answer.',
+                        //         'image_url': test.result[14].url,
+                        //         'buttons': [
+                        //             {
+                        //                 'type': 'postback',
+                        //                 'title': 'voir l\'image',
+                        //                 'payload': {
+                        //                     'type': 'google image',
+                        //                     'url': test.result[14].url
+                        //                 },
+                        //             },
                                    
-                                ],
-                            },
-                        {
-                            'title': 'Is this the right picture?',
-                            'subtitle': 'Tap a button to answer.',
-                            'image_url': test.result[16].url,
-                            'buttons': [
-                                {
-                                    'type': 'postback',
-                                    'title': 'voir l\'image',
-                                    'payload': {
-                                        'type': 'google image',
-                                        'url': test.result[16].url
-                                    },
-                                },
+                        //         ],
+                        //     },
+                        // {
+                        //     'title': 'Is this the right picture?',
+                        //     'subtitle': 'Tap a button to answer.',
+                        //     'image_url': test.result[16].url,
+                        //     'buttons': [
+                        //         {
+                        //             'type': 'postback',
+                        //             'title': 'voir l\'image',
+                        //             'payload': {
+                        //                 'type': 'google image',
+                        //                 'url': test.result[16].url
+                        //             },
+                        //         },
                               
-                            ],
-                        }
+                        //     ],
+                        // }
                     ]
                     }
                 }
