@@ -61,9 +61,10 @@ app.post('/webhook', (req, res) => {
       // if (webhookEvent.message) {
       //   message.messageRouters(senderPsid, webhookEvent)
       //   //handleMessage(senderPsid, webhookEvent.message);
-      // } else if (webhookEvent.postback) {
-      //   handlePostback(senderPsid, webhookEvent.postback);
-      // }
+     // } else
+       if (webhookEvent.postback) {
+        handlePostback(senderPsid, webhookEvent.postback);
+      }
 
     });
 
