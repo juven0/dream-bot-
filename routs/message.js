@@ -33,19 +33,12 @@ async function handleMessage(senderPsid, receivedMessage) {
                     'payload': {
                         'template_type': 'generic',
                         'elements': [{
-                            'title': 'Is this the right picture?',
-                            'subtitle': 'Tap a button to answer.',
                             'image_url': test.result[0].url,
                             'buttons': [
                                 {
                                     'type': 'postback',
-                                    'title': 'Yes!',
-                                    'payload': 'yes',
-                                },
-                                {
-                                    'type': 'postback',
-                                    'title': 'No!',
-                                    'payload': 'no',
+                                    'title': 'voir l\'image',
+                                    'payload': test.result[0].url,
                                 }
                             ],
                         },
