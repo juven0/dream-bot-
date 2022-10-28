@@ -25,7 +25,7 @@ app.use(json());
 const mongoose = require('mongoose')
 
 mongoose
-  // .connect(process.env.DB_URL)
+   .connect(process.env.DB_URL)
   // .then(() => {
   //   console.log('connected to mongodb 😎')
   // })
