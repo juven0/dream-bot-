@@ -10,7 +10,7 @@ const utils = require('./fonction/utils')
 const message = require('./routs/message')
 
 //connection with data base
-require('./db')
+//require('./db')
 
 // Imports dependencies and set up http server
 const
@@ -23,11 +23,11 @@ app.use(json());
 
 app.get('/', function (_req, res) {
   res.send('bot messenger by juveno');
-  console.log('ao izi ')
+
 });
 
 app.get('/webhook', (req, res) => {
-  console.log('ao izi ')
+
   const VERIFY_TOKEN = process.env.VERIFY_TOKEN;
 
   let mode = req.query['hub.mode'];
