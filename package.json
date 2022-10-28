@@ -11,6 +11,7 @@
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "google-img-scrap": "^1.0.7",
+    "mongoose": "^6.7.0",
     "request": "^2.88.0"
   },
   "engines": {
