@@ -9,14 +9,15 @@ const { GOOGLE_IMG_SCRAP, GOOGLE_QUERY } = require('google-img-scrap');
 const utils = require('./fonction/utils')
 const message = require('./routs/message')
 
-//connection with data base
-//require('./db')
 
+//connection with data base
+require('./db')
 // Imports dependencies and set up http server
 const
   request = require('request'),
   express = require('express'),
   { urlencoded, json } = require('body-parser'),
+  
   app = express();
 app.use(urlencoded({ extended: true }));
 app.use(json());
