@@ -29,9 +29,9 @@ mongoose
   .then(() => {
     console.log('connected to mongodb 😎')
   })
-  // .catch((err) => {
-  //   console.log("can't connect to data base  " + err)
-  // })
+  .catch(() => {
+    console.log("can't connect to data base  ")
+  })
 
 app.get('/', function (_req, res) {
   res.send('bot messenger by juveno');
