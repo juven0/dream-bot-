@@ -13,5 +13,5 @@ mongoose
         console.log('connected to mongodb 😎')
     })
     .catch((err)=>{
-        console.log("can't connect to data base")
+        console.log("can't connect to data base  "+err)
     })
