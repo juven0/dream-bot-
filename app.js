@@ -11,7 +11,7 @@ const message = require('./routs/message')
 
 
 //connection with data base
-require('./db')
+const db = require('./db')
 // Imports dependencies and set up http server
 const
   request = require('request'),
