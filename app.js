@@ -22,6 +22,8 @@ const
 app.use(urlencoded({ extended: true }));
 app.use(json());
 
+
+// connection with data base
 const mongoose = require('mongoose')
 
 mongoose
