@@ -10,149 +10,41 @@ module.exports.messageRouters = (senderPsid, webhookEvent)=>{
 
 async function handleMessage(senderPsid, receivedMessage) {
     let response;
-    let ur;
+    let elements = []
 
     if (receivedMessage.text) {
         response = {
             'text': 'attente de resultat ...'
         }
         utils.callSendAPI(senderPsid, response);
-            let test = await GOOGLE_IMG_SCRAP({
+            let googleResult = await GOOGLE_IMG_SCRAP({
                 search: receivedMessage.text,
                 query: {
                     SIZE: GOOGLE_QUERY.SIZE.LARGE,
                 },
-
                 excludeDomains: ["istockphoto.com", "alamy.com"]
            });
-
-        if (test){
+        if (googleResult){
+            for (let i=0;i<10 ; i++){
+                elements = [...elements, {
+                    'title': 'Is this the right picture?',
+                            'image_url': googleResult.result[i].url,
+                            'buttons': [
+                                {
+                                    'type': 'postback',
+                                    'title': 'voir l\'image',
+                                    'payload':googleResult.result[i].url,
+                                    
+                                }
+                            ]
+                        }]
+            }
             response = {
                 'attachment': {
                     'type': 'template',
                     'payload': {
                         'template_type': 'generic',
-                        'elements': [{
-                            'title': 'Is this the right picture?',
-                            'image_url': test.result[0].url,
-                            'buttons': [
-                                {
-                                    'type': 'postback',
-                                    'title': 'voir l\'image',
-                                    'payload': test.result[0].url,
-                                    
-                                }
-                            ],
-                        },
-                        {
-                            'title': 'Is this the right picture?',
-                            'image_url': test.result[2].url,
-                            'buttons': [
-                                {
-                                    'type': 'postback',
-                                    'title': 'voir l\'image',
-                                    'payload':test.result[3].url
-                                   
-                                },
-                            ],
-                        },
-                        {
-                            'title': 'Is this the right picture?',
-                            'image_url': test.result[4].url,
-                            'buttons': [
-                                {
-                                    'type': 'postback',
-                                    'title': 'voir l\'image',
-                                    'payload': test.result[4].url
-                                },
-                                
-                            ],
-                        },
-                        {
-                            'title': 'Is this the right picture?',
-                            'image_url': test.result[6].url,
-                            'buttons': [
-                                {
-                                    'type': 'postback',
-                                    'title': 'voir l\'image ?',
-                                    'payload':  test.result[6].url
-                                },
-                               
-                            ],
-                        },
-                            {
-                                'title': 'Is this the right picture?',
-                                'image_url': test.result[8].url,
-                                'buttons': [
-                                    {
-                                        'type': 'postback',
-                                        'title': 'voir l\'image',
-                                        'payload':test.result[8].url
-                                    },
-                                 
-                                ],
-                            },
-                            {
-                                'title': 'Is this the right picture?',
-                                'image_url': test.result[10].url,
-                                'buttons': [
-                                    {
-                                        'type': 'postback',
-                                        'title': 'voir l\'image',
-                                        'payload': test.result[10].url
-                                    },
-                                    
-                                ],
-                            },
-                            {
-                                'title': 'Is this the right picture?',
-                                'image_url': test.result[10].url,
-                                'buttons': [
-                                    {
-                                        'type': 'postback',
-                                        'title': 'voir l\'image',
-                                        'payload': test.result[4].url
-                                    },
-                                    
-                                ],
-                            },
-                            {
-                                'title': 'Is this the right picture?',
-                                'image_url': test.result[12].url,
-                                'buttons': [
-                                    {
-                                        'type': 'postback',
-                                        'title': 'voir l\'image',
-                                        'payload':test.result[12].url
-                                    },
-                                   
-                                ],
-                            },
-                            {
-                                'title': 'Is this the right picture?',
-                                'image_url': test.result[14].url,
-                                'buttons': [
-                                    {
-                                        'type': 'postback',
-                                        'title': 'voir l\'image',
-                                        'payload':test.result[14].url
-                                    },
-                                   
-                                ],
-                            },
-                        {
-                            'title': 'Is this the right picture?',
-                            'image_url': test.result[16].url,
-                            'buttons': [
-                                {
-                                    'type': 'postback',
-                                    'title': 'voir l\'image',
-                                    'payload':  test.result[16].url
-                                },
-                              
-                            ],
-                        }
-                    ]
+                        'elements': elements
                     }
                 }
             };
@@ -161,8 +53,7 @@ async function handleMessage(senderPsid, receivedMessage) {
                 'text': receivedMessage.text
             }
         }
-
-
+        
     } else if (receivedMessage.attachments) {
 
         let attachmentUrl = receivedMessage.attachments[0].payload.url;
