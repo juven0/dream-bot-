@@ -59,50 +59,33 @@ app.get('/webhook', (req, res) => {
 
 app.post('/webhook', (req, res) => {
     let body = req.body;
-
     if (body.object === 'page') {
-
         body.entry.forEach(function(entry) {
-
             let webhookEvent = entry.messaging[0];
-            console.log(webhookEvent);
-
             let senderPsid = webhookEvent.sender.id;
             console.log('Sender PSID: ' + senderPsid);
-
             message.messageRouters(senderPsid, webhookEvent)
-
-           
             if (webhookEvent.postback) {
                 handlePostback(senderPsid, webhookEvent.postback);
             }
-
         });
-
         res.status(200).send('EVENT_RECEIVED');
     } else {
-
         res.sendStatus(404);
     }
 });
 
-
 function handlePostback(senderPsid, receivedPostback) {
     let response;
-
-
     let payload = receivedPostback.payload;
     response = { 'text': 'votre image est sur cette url' + payload };
-
     if (payload === 'yes') {
         response = { 'text': 'Thanks!' };
     } else if (payload === 'no') {
         response = { 'text': 'Oops, try sending another image.' };
     }
-
     utils.callSendAPI(senderPsid, response);
 }
-
 
 var listener = app.listen(process.env.PORT, function() {
     console.log('Your app is listening on port ' + listener.address().port);

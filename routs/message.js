@@ -53,7 +53,7 @@ async function handleMessage(senderPsid, receivedMessage) {
                 'text': receivedMessage.text
             }
         }
-        
+
     } else if (receivedMessage.attachments) {
 
         let attachmentUrl = receivedMessage.attachments[0].payload.url;
@@ -65,7 +65,7 @@ async function handleMessage(senderPsid, receivedMessage) {
                     'elements': [{
                         'title': 'Is this the right picture?',
                         'subtitle': 'Tap a button to answer.',
-                        'image_url': test.result[1].url,
+                        'image_url': attachmentUrl,
                         'buttons': [
                             {
                                 'type': 'postback',
