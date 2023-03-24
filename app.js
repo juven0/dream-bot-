@@ -101,6 +101,12 @@ function handlePostback(senderPsid, receivedPostback) {
     utils.callSendAPI(senderPsid, response);
 }
 
+app.get('/image', function(req, res) {
+    const url = path.resolve('fonction','1679313304050.jpg')
+    response={'text':url}
+  res.sendFile(url);
+});
+
 var listener = app.listen(process.env.PORT, function() {
     console.log('Your app is listening on port ' + listener.address().port);
 });
