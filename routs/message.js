@@ -91,15 +91,17 @@ async function handleMessage(senderPsid, receivedMessage) {
 
     utils.callSendAPI(senderPsid, response);
 }
-const messagePostBack= (senderPsid, receivedPostback) =>{
+const messagePostBack= async (senderPsid, receivedPostback) =>{
     let response;
     let payload = receivedPostback.payload;
+    response = { 'text': 'telechargement de l\'image' };
+    utils.callSendAPI(senderPsid, response);
 
-    //let urlImage = downloader.downloader(payload)
+    let imageName = downloader.downloader(payload)
     response =  {"attachment":{
         "type":"image", 
         "payload":{
-          "url":`https://dream-bot.onrender.com/image/`,
+          "url":`https://dream-bot.onrender.com/image/${imageName}`,
           "is_reusable": true
         }
       }}

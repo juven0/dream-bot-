@@ -77,8 +77,9 @@ app.post('/webhook', (req, res) => {
 
 
 
-app.get('/image/', function(req, res) {
-  res.sendFile(__dirname + '/public/images/1679313304050.jpg');
+app.get('/image/:name', function(req, res) {
+    const imageName = req.params.name
+    res.sendFile(__dirname + `/public/images/${imageName}`);
 });
 
 var listener = app.listen(process.env.PORT, function() {
