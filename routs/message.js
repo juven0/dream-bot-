@@ -14,7 +14,7 @@ async function handleMessage(senderPsid, receivedMessage) {
 
     if (receivedMessage.text) {
         response = {
-            'text': 'attente de resultat ...'
+            'text': '...'
         }
         utils.callSendAPI(senderPsid, response);
             let googleResult = await GOOGLE_IMG_SCRAP({

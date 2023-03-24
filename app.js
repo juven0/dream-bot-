@@ -5,6 +5,7 @@ require('dotenv').config();
 const { GOOGLE_IMG_SCRAP, GOOGLE_QUERY } = require('google-img-scrap');
 const utils = require('./fonction/utils')
 const message = require('./routs/message')
+const path  = require('path')
 
 
 //connection with data base
@@ -78,7 +79,16 @@ app.post('/webhook', (req, res) => {
 function handlePostback(senderPsid, receivedPostback) {
     let response;
     let payload = receivedPostback.payload;
-    response = { 'text': 'votre image est sur cette url' + payload };
+    const url = path.resolve('fonction','1679313304050.jpg')
+    response =  {"attachment":{
+        "type":"image", 
+        "payload":{
+          "url":`https://dream-bot.onrender.com/${url}`,
+          "is_reusable": true
+        }
+      }}
+
+
     if (payload === 'yes') {
         response = { 'text': 'Thanks!' };
     } else if (payload === 'no') {
