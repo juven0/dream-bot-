@@ -81,13 +81,11 @@ app.post('/webhook', (req, res) => {
 function handlePostback(senderPsid, receivedPostback) {
     let response;
     let payload = receivedPostback.payload;
-    const url = path.resolve('fonction','1679313304050.jpg')
-    response={'text':url}
     utils.callSendAPI(senderPsid, response);
     response =  {"attachment":{
         "type":"image", 
         "payload":{
-          "url":`https://dream-bot.onrender.com/${url}`,
+          "url":`https://dream-bot.onrender.com/image`,
           "is_reusable": true
         }
       }}
