@@ -97,7 +97,7 @@ const messagePostBack= async (senderPsid, receivedPostback) =>{
     response = { 'text': 'telechargement de l\'image' };
     utils.callSendAPI(senderPsid, response);
     console.log(payload)
-    let imageName = downloader.downloader(payload)
+    let imageName = await downloader.downloader(payload)
     console.log(imageName)
     response =  {"attachment":{
         "type":"image", 
