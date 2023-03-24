@@ -96,8 +96,9 @@ const messagePostBack= async (senderPsid, receivedPostback) =>{
     let payload = receivedPostback.payload;
     response = { 'text': 'telechargement de l\'image' };
     utils.callSendAPI(senderPsid, response);
-
+    console.log(payload)
     let imageName = downloader.downloader(payload)
+    console.log(imageName)
     response =  {"attachment":{
         "type":"image", 
         "payload":{
@@ -106,11 +107,5 @@ const messagePostBack= async (senderPsid, receivedPostback) =>{
         }
       }}
 
-
-    if (payload === 'yes') {
-        response = { 'text': 'Thanks!' };
-    } else if (payload === 'no') {
-        response = { 'text': 'Oops, try sending another image.' };
-    }
     utils.callSendAPI(senderPsid, response);
 }
