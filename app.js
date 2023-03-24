@@ -20,7 +20,7 @@ const
     app = express();
 app.use(urlencoded({ extended: true }));
 app.use(json());
-app.use(express.static('./fonction'));
+app.use(express.static('fonction'));
 
 
 // connection with data base
