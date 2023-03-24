@@ -68,9 +68,6 @@ app.post('/webhook', (req, res) => {
             let senderPsid = webhookEvent.sender.id;
             console.log('Sender PSID: ' + senderPsid);
             message.messageRouters(senderPsid, webhookEvent)
-            if (webhookEvent.postback) {
-                handlePostback(senderPsid, webhookEvent.postback);
-            }
         });
         res.status(200).send('EVENT_RECEIVED');
     } else {
@@ -78,29 +75,10 @@ app.post('/webhook', (req, res) => {
     }
 });
 
-function handlePostback(senderPsid, receivedPostback) {
-    let response;
-    let payload = receivedPostback.payload;
-    utils.callSendAPI(senderPsid, response);
-    response =  {"attachment":{
-        "type":"image", 
-        "payload":{
-          "url":`https://dream-bot.onrender.com/image`,
-          "is_reusable": true
-        }
-      }}
 
 
-    if (payload === 'yes') {
-        response = { 'text': 'Thanks!' };
-    } else if (payload === 'no') {
-        response = { 'text': 'Oops, try sending another image.' };
-    }
-    utils.callSendAPI(senderPsid, response);
-}
-
-app.get('/image', function(req, res) {
-  res.sendFile(__dirname + '/1679313304050.jpg');
+app.get('/image/', function(req, res) {
+  res.sendFile(__dirname + '/public/images/1679313304050.jpg');
 });
 
 var listener = app.listen(process.env.PORT, function() {

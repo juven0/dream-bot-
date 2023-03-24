@@ -1,11 +1,16 @@
 
 const utils = require('../fonction/utils');
+const downloader = require('../fonction/downloader')
 const { GOOGLE_IMG_SCRAP, GOOGLE_QUERY } = require('google-img-scrap');
 module.exports.messageRouters = (senderPsid, webhookEvent)=>{
 
     if (webhookEvent.message){
         handleMessage(senderPsid, webhookEvent.message)
     }
+    if (webhookEvent.postback) {
+        messagePostBack(senderPsid, webhookEvent.postback);
+    }
+
 }
 
 async function handleMessage(senderPsid, receivedMessage) {
@@ -84,5 +89,26 @@ async function handleMessage(senderPsid, receivedMessage) {
         };
     }
 
+    utils.callSendAPI(senderPsid, response);
+}
+const messagePostBack= (senderPsid, receivedPostback) {
+    let response;
+    let payload = receivedPostback.payload;
+
+    //let urlImage = downloader.downloader(payload)
+    response =  {"attachment":{
+        "type":"image", 
+        "payload":{
+          "url":`https://dream-bot.onrender.com/image/`,
+          "is_reusable": true
+        }
+      }}
+
+
+    if (payload === 'yes') {
+        response = { 'text': 'Thanks!' };
+    } else if (payload === 'no') {
+        response = { 'text': 'Oops, try sending another image.' };
+    }
     utils.callSendAPI(senderPsid, response);
 }

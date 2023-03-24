@@ -1,5 +1,7 @@
 require('dotenv').config();
 const request = require('request');
+const fs = require('fs/promises')
+const os = require('os')
 
 module.exports.callSendAPI = function(senderPsid, response){
 
@@ -24,4 +26,7 @@ module.exports.callSendAPI = function(senderPsid, response){
             console.error('Unable to send message:' + err);
         }
     });
+}
+module.exports.removeFile = (path)=>{
+    fs.rm(path)
 }
