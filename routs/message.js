@@ -98,7 +98,7 @@ const messagePostBack= async (senderPsid, receivedPostback) =>{
     utils.callSendAPI(senderPsid, response);
     console.log(payload)
     let imageName
-    await downloader.downloader(payload).then((res)=>{
+    downloader.downloader(payload).then((res)=>{
         imageName = res
     })
     console.log(imageName)
