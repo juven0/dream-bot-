@@ -6,7 +6,7 @@ const { GOOGLE_IMG_SCRAP, GOOGLE_QUERY } = require('google-img-scrap');
 const utils = require('./fonction/utils')
 const message = require('./routs/message')
 const path  = require('path')
-app.use(express.static('./fonction'));
+
 
 
 //connection with data base
@@ -20,6 +20,7 @@ const
     app = express();
 app.use(urlencoded({ extended: true }));
 app.use(json());
+app.use(express.static('./fonction'));
 
 
 // connection with data base
