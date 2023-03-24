@@ -91,7 +91,7 @@ async function handleMessage(senderPsid, receivedMessage) {
 
     utils.callSendAPI(senderPsid, response);
 }
-const messagePostBack= (senderPsid, receivedPostback) {
+const messagePostBack= (senderPsid, receivedPostback) =>{
     let response;
     let payload = receivedPostback.payload;
 
