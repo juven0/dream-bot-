@@ -102,7 +102,7 @@ function handlePostback(senderPsid, receivedPostback) {
 }
 
 app.get('/image', function(req, res) {
-  res.sendFile(__dirname+ '/fonction/1679313304050.jpg');
+  res.sendFile(__dirname + '/1679313304050.jpg');
 });
 
 var listener = app.listen(process.env.PORT, function() {
