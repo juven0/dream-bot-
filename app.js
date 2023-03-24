@@ -103,7 +103,6 @@ function handlePostback(senderPsid, receivedPostback) {
 
 app.get('/image', function(req, res) {
     const url = path.resolve('fonction','1679313304050.jpg')
-    response={'text':url}
   res.sendFile(url);
 });
 
